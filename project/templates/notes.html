@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block title %}Дневник программиста{% endblock %}
+
+{% block content %}
+<h2>Дневник программиста</h2>
+<form action="/add-note" method="post">
+    <label for="title">Заголовок записи:</label><br>
+    <input type="text" id="title" name="title"><br>
+    <label for="text">Текст записи:</label><br>
+    <textarea id="text" name="text"></textarea><br>
+    <button type="submit">Добавить запись</button>
+</form>
+<hr>
+<h3>Записи:</h3>
+{% for title, text in notes.items() %}
+<div>
+    <h4>{{ title }}</h4>
+    <p>{{ text }}</p>
+</div>
+{% endfor %}
+{% endblock %}

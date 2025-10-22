@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initiai-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/css/index.css/">
+</head>
+
+<body>
+    <header>
+        <h1>Дневник программиста</h1>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <table>
+        <thead>
+            <tr>
+                <th>Номер</th>
+                <th>Тема</th>
+            </tr>
+        </thead>
+        <tbodu>
+            <tr>
+                <td>1</td>
+                <td>Тема 1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Тема 2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Тема 3</td>
+            </tr>
+        </tbodu>
+    </table>
+    <footer>
+        <p>&copy; 2025</p>
+    </footer>
+</body>
+
+</html>
